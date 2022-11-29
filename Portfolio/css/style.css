@@ -1,0 +1,165 @@
+  /*ELEMENTS*/
+
+  body {background: #11151C; margin: 0px; padding: 0px;}
+  h2 {font-family: 'Ubuntu'; text-align: center;}
+  h1 {text-align: center;}
+  h3 {text-align: center;}
+  a { text-decoration: none; color: white;}
+  * {font-family: 'Ubuntu'}
+  main {margin: 10px; display: flex; height: 400px;}
+  input {border-radius: 50px}
+  textarea {border-radius: 50px}
+  iframe {display: block; margin: 0 auto; position: relative; padding: 1%; border-radius: 40px;}
+  
+    /*IDs*/
+  
+  #logo { width: 598px; margin: 0 auto; font-size: 50pt; font-family: Ubuntu; }
+  #odkazy { margin-left: 100px; }
+  #animator {background-color: #11151C; position: relative; align-items: center; justify-content: center; display: flex; width: 350px; height: 350px; cursor: pointer;}
+  #profile_pic {opacity: 1; width: 300px; height: 300px; border-radius: 50%; position: absolute; transition: all 0.5s ease-in-out;}
+  #animator:hover > #profile_pic {opacity: 0.5;}
+  #animator:hover > #menu {opacity: 1; font-size: 3em;}
+  #contacts {text-align: center; z-index: 2; opacity: 0%; animation: textShow .5s ease-in-out 2.5s forwards;transition: all .5s;}
+  .contacts-hide {display: none;}
+  .info-hide {display: none;}
+  #info {z-index: 2; opacity: 0%; animation: textShow .5s ease-in-out 2.5s forwards;}
+  #kdo_jsem {display: flex; justify-content: space-evenly; width: 100%; height: 400px; background-color: #11151C; align-items: center; position: absolute;}
+  .menu-section-style {display: flex; justify-content: space-evenly; width: 100%; height: 400px; background-color: #11151C; align-items: center; position: absolute; opacity: 0; transition: all 2s ease-in-out;}
+  .menu-show {opacity: 1; display: flex; justify-content: space-evenly; width: 100%; height: 400px; background-color: #11151C; align-items: center; position: absolute; transition: all 2s ease-in-out;}
+  #tvorba, #zajmy, #cile {position: absolute;}
+  #dashword {background-color:#FFF; border-radius: 20px; border-color: white; display: flex; align-self: center; flex-direction: column; margin: 5%;}
+  #dashword-text{margin: 2%;}
+  #menu {
+    z-index: 99999; 
+    opacity: 0; 
+    transition: all 0.5s; 
+    position: absolute;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bolder;
+    color: #000;
+  }
+
+  .kruh-style {
+    background-color: #EAD7D1;
+    position: absolute;
+    border-radius: 50%;
+    height: 25em;
+    width: 25em;
+  }
+
+  .kruh-open {
+    animation: kruh-expand 1500ms ease-in-out  1s forwards;
+  }
+
+  .kruh-close {
+    animation: kruh-close 1.5 ease-in-out;
+  }
+
+  #kruh-menu {
+    background-color: white;
+    position: absolute;
+    border-radius: 30px;
+    height: 25em;
+    width: 22em;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #animator:hover > #kruh-menu {
+    height: 27em;
+    width: 24em;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  #kruh-menu:hover {
+    height: 27em;
+    width: 24em;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  @keyframes kruh-expand {
+    25% {border-radius: 20px; transform: translate(0px, 0px) scale(1, 1);}
+    100% {border-radius: 20px; transform: translate(0px, 0px) scale(4, 1);}
+  }
+
+  @keyframes textShow {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes textHide {
+    to {
+      opacity: 0;
+    }
+  }
+
+
+    /*CLASSES*/
+  
+  .sedy-ram1 {
+      background-color: #11151C;
+      width: 100%;
+      height: 30%;
+  }
+  .hlavni-nadpis {font-family: 'Ubuntu'; color: white}
+  .hlavni-nadpis > h1 {font-size: 5em}
+  .hlavni-nadpis > p {font-size: 2em}
+  .nadpis-podstranka > h1 {font-size: 3em}
+  .nadpis-podstranka > p {font-size: 1.5em}
+  .nadpis-aplikace {text-align: center}
+  .mezera-vertical-200 {height: 190px}
+  .mezera-vertical-100 {height: 80px}
+  .mezera-vertical-50 {height: 30px}
+  .mezera-vertical-25 {height: 15px}
+  .dialog-background {width: 100%; height: 100%; background: #000; opacity: .85; position: fixed; left: 0; top: 0; display: none}
+  .dialog {width: 50%; position: fixed; left: 50%; top: 50%; height: 200px; margin-top: -100px; margin-left: -25%; background: #010101; color: #FFF; display: none;}
+  .show .dialog, .show .dialog-background {display: block;}
+  .zavrit {margin-left: 85%; border-radius: 5px; padding: 20px 45px; background-color: black; background-image: linear-gradient(72deg, rgba(0,0,64,1) 0%, black 100%);;display: inline-block; font: normal bold 26px/1 "Ubuntu", sans-serif; text-align: center; transition: 0.5s; color: white}
+  .zavrit:hover {background-color: black; color: white; cursor: pointer; margin-left: 86%; border-radius: 12px}
+  .learn-more {margin-left: 42.5%; border-radius: 5px; background-color: black; background-image: linear-gradient(72deg, rgba(0,0,64,1) 0%, black 100%);;display: inline-block; font: normal 16px/1 "Ubuntu", sans-serif; text-align: center; transition: 0.5s; width: 80px; height: 40px; margin-bottom: 10px; color: white}
+  .learn-more:hover {background-color: black; color: white; cursor: pointer; margin-left: 43.5%; border-radius: 12px}
+  .learn-more-right {margin-left: 35%; border-radius: 5px; background-color: black; background-image: linear-gradient(72deg, rgba(0,0,64,1) 0%, black 100%);; display: inline-block; font: normal 16px/1 "Ubuntu", sans-serif; text-align: center; transition: 0.5s; width: 80px; height: 40px; margin-bottom: 10px; color: white;}
+  .learn-more-right:hover {background-color: black; color: white; cursor: pointer; margin-left: 36%; border-radius: 12px}
+  
+  @keyframes kruh-close {
+    0% {border-radius: 20px; transform: translate(0px, 0px) scale(4, 1);}
+    75% {border-radius: 20px; transform: translate(0px, 0px) scale(1, 1);}
+    100% {border-radius: 50%; transform: translate(0px, 0px) scale(1, 1)}
+  }
+
+
+  /*.hledani ul {list-style: none}
+  .hledani li {=display: block; overflow: hidden; max-height: 1.5em; opacity: 1; transition: 1s all}*/
+  
+    /*SCROLLBAR*/
+  
+  ::-webkit-scrollbar {width: 10px; background: rgba(0,0,0,0);}
+  ::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  -webkit-border-radius: 10px; border-radius: 10px;}
+  ::-webkit-scrollbar-track-piece { background: rgba(0,0,0,0.5);}
+  ::-webkit-scrollbar-thumb {-webkit-border-radius: 10px; border-radius: 10px; background: rgba(0,0,0,0.4); }
+  ::-webkit-scrollbar-thumb:window-inactive {background: rgba(255,255,255,0.4); }
+
+    /*MENU APPS*/
+  
+  .icon-bar {
+    width: 100%;
+    height: 60px;
+    background-color: gray;
+    overflow: auto;
+  }
+  
+  .icon-bar a {
+    float: center;
+    width: 14%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+  }
+  .icon-bar a:hover {
+    background-color: white;
+  }  
